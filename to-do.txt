@@ -7,3 +7,5 @@ kolom centang   : untuk cek status to do
 to do           : memuat tabel to do list, verisikan informasi tugas yang akan / sedang berjalan
 done            : memuat list to do yang sudah selesai
 button delete   : memghapus seluruh list to do yang telah dibuat
+
+bismillah
