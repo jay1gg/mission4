@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  .navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .sidebar {
+    background-color: #f44336;
+    color: white;
+    width: 250px;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    display: none; /* Hide sidebar by default */
+  }
+  
+  .sidebar.show-sidebar {
+    display: block; /* Show sidebar when .show-sidebar class is present */
+  }
+  
+  .sidebar h2 {
+    margin-top: 0;
+  }
+  
+  .main {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .header {
+    background-color: #f44336;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .header input {
+    width: calc(40% - 10px);
+    margin: 5px;
+  }
+  
+  .header select {
+    width: calc(20% - 10px);
+    margin: 5px;
+  }
+  
+  .header .addBtn {
+    width: calc(20% - 10px);
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    background: #eee;
+    margin: 5px 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    font-size: 18px;
+  }
+  
+  ul li.checked {
+    background: #888;
+    color: #ff0000;
+    text-decoration: line-through;
+  }
+  
+  ul li.checked .due-date {
+    color: #ff0000;
+  }
+  
+  ul li .close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: red;
+  }
+  
+  .due-date {
+    font-size: 14px;
+    color: #555;
+    margin-right: 30px;
+  }
+  
+  .clearBtn, .deleteUserBtn {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    background: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+  }
+  
+  .clearBtn:hover, .deleteUserBtn:hover {
+    background: #d32f2f;
+  }
+  
+  .user-list {
+    background-color: #ff7961;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .user-list:hover {
+    background-color: #d32f2f;
+  }
+  
+  .user-info {
+    font-size: 14px;
+    color: #ccc;
+    margin-top: 5px;
+  }
+  
+  .user-input {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .user-input input {
+    width: 70%;
+    margin-right: 5px;
+  }
+  
+  .user-input select {
+    width: 30%;
+  }
+  
+  .user-input .addBtn {
+    width: 100%;
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .main {
+      padding: 10px;
+    }
+  
+    .header input, .header select, .header .addBtn {
+      width: 100%;
+      margin: 5px 0;
+    }
+  
+    .show-sidebar .sidebar {
+      display: block; /* Show sidebar when .show-sidebar class is present */
+    }
+  }
+  @media (min-width: 600px) {
+  
+    .sidebar {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  
+  .clock {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: #f44336;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+  }

@@ -1,0 +1,9 @@
+profile         : menampilkan informasi nama dan jabatan
+time            : menampilkan informasi waktu verupa hari dan tanggal
+text area       : untuk menuliskan tugas
+level prioritas : low medium high
+button submit   : menampilkan informasi tugas dari text area
+kolom centang   : untuk cek status to do
+to do           : memuat tabel to do list, verisikan informasi tugas yang akan / sedang berjalan
+done            : memuat list to do yang sudah selesai
+button delete   : memghapus seluruh list to do yang telah dibuat

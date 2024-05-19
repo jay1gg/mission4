@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="navbar">
+    <span id="welcomeMessage">Welcome, <span id="currentUserName"></span> (<span
+        id="currentUserPosition"></span>)</span>
+    <button onclick="toggleSidebar()">Add / Change User</button>
+  </div>
+
+  <div class="container">
+    <div class="sidebar" id="sidebar">
+      <h2>Users</h2>
+      <div class="user-input">
+        <input type="text" id="userInput" placeholder="New Username">
+        <input type="text" id="userPosition" placeholder="Position">
+        <span onclick="addUser()" class="addBtn">Add</span>
+      </div>
+      <div id="userListContainer"></div>
+      <button onclick="deleteUser()" class="deleteUserBtn">Delete User</button>
+    </div>
+
+    <div class="main">
+      <div class="header" id="myDIV">
+        <h2 style="margin:5px">My To Do List for today</h2>
+        <input type="text" id="myInput" placeholder="Title...">
+        <input type="date" id="myDate">
+        <select id="priorityLevel">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <span onclick="newElement()" class="addBtn">Add</span>
+      </div>
+
+      <ul id="myUL">
+        <li>Smile</li>
+        <li>Be Greatful</li>
+        <li>Think Positive</li>
+        <li>Inspire</li>
+        <li>Love</li>
+      </ul>
+      <button onclick="clearAllTasks()" class="clearBtn">Clear All Tasks</button>
+    </div>
+  </div>
+
+  <div class="clock" id="clock"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>
